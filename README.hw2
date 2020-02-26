@@ -1,8 +1,20 @@
 Jessica Rooney
-2//2020
+2/24/2020
 What the program does
-How to compile it
+This program accepts a single ip address as a command line argument, then returns whether the machine is potentially infected with Sasser.exe based on whether or not the port 5554 is open or not.
+However, just because the port is open does not mean the machine is infected with Sasser.exe. It is simply a potential IOC. Please do not use this as a Sasser virus scanner. 
 
+How to compile it
+Please run this on a linux system that has the netcat package installed.
+Ensure the script is executable (chmod +x sasserScanner.sh)
+Run sasserScanner.sh. Usage instructions are included in the script and below:
+Usage: ./sasserScanner.sh {IP address to scan}
+
+
+
+
+
+Notes on the executable that was Reverse Engineered:
 malware.exe is attempting to connect to other computers under the same first two subnets, and then sequentially looking through everyone else on the subnet (subnet mask is 255.255.0.0), attempting to connect to port 445.
 It is listening on port 5554.
 
